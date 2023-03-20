@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 if (isset($_POST["submit"])) {
 
     session_destroy();
@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
     unset($_SESSION['auth_user']);
 
     $_SESSION["message"] ="logout successful";
-    header("location:login.php");
+    header("Location:login.php");
     exit(0);
 }
 

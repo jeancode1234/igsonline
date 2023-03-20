@@ -28,8 +28,8 @@ session_start();
           ];
 
           if ( $_SESSION['auth_role']=="1") {
-            $_SESSION["message"] = "Bienvenue au tableau de bord";
-            header("Location: admin/index.php");
+            $_SESSION["message"] = "Bienvenue au tableau de bord"." ".$_SESSION['auth_user']['user_name'];
+            header("Location: adminindex.php");
             exit(0);
           }else if ($_SESSION['auth_role']=="0") {
             $_SESSION["message"] = "Bienvenue sur notre plateform";

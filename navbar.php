@@ -53,7 +53,7 @@
                     </div>
                   </div>
                 </div>  
-                 <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:outline-none focus:shadow-outline" href="admin/index.php">Dashbord</a>
+                 <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:outline-none focus:shadow-outline" href="adminindex.php">Dashbord</a>
 
                   <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:outline-none focus:shadow-outline" href="#">Contact</a>
                   <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -151,8 +151,9 @@
                     </div>
                   </div>
                 </div>  
-                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:outline-none focus:shadow-outline" href="#">Contact</a>
+                <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-800 focus:text-gray-800  focus:outline-none focus:shadow-outline" href="#">Contact</a>
                 <a class="px-8 py-3 mt-2 text-sm font-semibold bg-orange-500 rounded-full dark-mode:bg-transparent hover:bg-white dark-mode:focus:bg-orange-600 text-white dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:bg-white focus:outline-none focus:shadow-outline"  href="login.php">Se connecter</a>
+                <a class="px-8 py-3 mt-2 text-sm font-semibold bg-white rounded-full dark-mode:bg-transparent hover:bg-gray-800 dark-mode:focus:bg-orange-600 text-gray-800 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-white  focus:bg-white focus:outline-none focus:shadow-outline "  href="register.php">S'inscrire</a>
               <?php }; ?>
           </nav>
         </div>
