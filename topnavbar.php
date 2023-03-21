@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-     <div class = "fixed w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
+    <div class = "fixed w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
         <div class = "logo ml-12 dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
-            NERVE
+            TABLEAU DE BORD
         </div>
         <!-- SPACER -->
         <div class = "grow h-full flex items-center justify-center"></div>
@@ -24,7 +23,14 @@
                     </div>
                     </div>
 
-                    <div class = "hidden md:block text-sm md:text-md text-black dark:text-white">John Doe</div>
+                    <div class = "hidden md:block text-sm md:text-md text-black dark:text-white">
+                        <?php 
+                             if (isset($_SESSION['auth_user'])) {?>
+                                  <span><?php echo $_SESSION['auth_user']['user_name'];?></span>
+                             <?php 
+                             }
+                        ?>
+                    </div>
                 </div>
                 
         </div>

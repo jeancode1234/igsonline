@@ -2,6 +2,8 @@
 
    include("authentification.php");
    include("connexion.php");
+   include("sidebar.php");
+   include("topnavbar.php");
   ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,21 +11,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="styles.css">
      <title>Document</title>
-     <style>
-     :root { font-family: 'Inter', sans-serif; }
-        @supports (font-variation-settings: normal) {
-        :root { font-family: 'Inter var', sans-serif; }
-        }
-    </style>
+
 </head>
 <body>
+
 <div class = "content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
-    <?php include("sidebar.php") ;?>
+    
+    
         <nav class = "flex px-5 py-3 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
             <ol class = "inline-flex items-center space-x-1 md:space-x-3">
                 <li class = "inline-flex items-center">
@@ -32,12 +28,7 @@
                         Home
                     </a>
                 </li>
-                <li>
-                    <div class = "flex items-center">
-                        <svg class = "w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
-                        <a href="#" class = "ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white">Templates</a>
-                    </div>
-                </li>
+              
             </ol>
         </nav>
         <!-------body contain-------->
@@ -116,13 +107,11 @@
                 </div>
             </div>
         </div>
-        <div id="last-users">
-                        <div class="w-full flex justify-between">
-                         
-                        </div>
+      
+                       
                         <div class="overflow-x-scroll">
                             <table class="w-full whitespace-nowrap">
-                                <thead class="bg-black/60">
+                                <thead class="bg-gradient-to-r dark:from-cyan-500 text-white dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500">
                                    <th class="text-left py-3 px-2 rounded-l-lg">ID</th>
                                     <th class="text-left py-3 px-2">Name</th>
                                     <th class="text-left py-3 px-2">Email</th>
@@ -177,8 +166,63 @@
                                 
                             </table>
                         </div>
-                    </div>
-                
+                    
 </div>
+
+<script>
+        const sidebar = document.querySelector("aside");
+        const maxSidebar = document.querySelector(".max")
+        const miniSidebar = document.querySelector(".mini")
+        const roundout = document.querySelector(".roundout")
+        const maxToolbar = document.querySelector(".max-toolbar")
+        const logo = document.querySelector('.logo')
+        const content = document.querySelector('.content')
+        const moon = document.querySelector(".moon")
+        const sun = document.querySelector(".sun")
+
+        function setDark(val){
+            if(val === "dark"){
+                document.documentElement.classList.add('dark')
+                moon.classList.add("hidden")
+                sun.classList.remove("hidden")
+            }else{
+                document.documentElement.classList.remove('dark')
+                sun.classList.add("hidden")
+                moon.classList.remove("hidden")
+            }
+        }
+
+        function openNav() {
+            if(sidebar.classList.contains('-translate-x-48')){
+                // max sidebar 
+                sidebar.classList.remove("-translate-x-48")
+                sidebar.classList.add("translate-x-none")
+                maxSidebar.classList.remove("hidden")
+                maxSidebar.classList.add("flex")
+                miniSidebar.classList.remove("flex")
+                miniSidebar.classList.add("hidden")
+                maxToolbar.classList.add("translate-x-0")
+                maxToolbar.classList.remove("translate-x-24","scale-x-0")
+                logo.classList.remove("ml-12")
+                content.classList.remove("ml-12")
+                content.classList.add("ml-12","md:ml-60")
+            }else{
+                // mini sidebar
+                sidebar.classList.add("-translate-x-48")
+                sidebar.classList.remove("translate-x-none")
+                maxSidebar.classList.add("hidden")
+                maxSidebar.classList.remove("flex")
+                miniSidebar.classList.add("flex")
+                miniSidebar.classList.remove("hidden")
+                maxToolbar.classList.add("translate-x-24","scale-x-0")
+                maxToolbar.classList.remove("translate-x-0")
+                logo.classList.add('ml-12')
+                content.classList.remove("ml-12","md:ml-60")
+                content.classList.add("ml-12")
+
+            }
+
+        }
+    </script>
 </body>
 </html>
