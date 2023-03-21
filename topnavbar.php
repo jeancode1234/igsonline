@@ -15,7 +15,9 @@
         <!-- SPACER -->
         <div class = "grow h-full flex items-center justify-center"></div>
         <div class = "flex-none h-full text-center flex items-center justify-center">
-            
+                  <div>
+                    
+                  </div>
                 <div class = "flex space-x-3 items-center px-3">
                     <div class = "flex-none flex justify-center">
                     <div class="w-8 h-8 flex ">

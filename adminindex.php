@@ -20,7 +20,7 @@
 <div class = "content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
     
     
-        <nav class = "flex px-5 py-3 text-gray-700  rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
+        <nav class = "flex px-5 py-3 text-gray-700 justify-between rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
             <ol class = "inline-flex items-center space-x-1 md:space-x-3">
                 <li class = "inline-flex items-center">
                     <a href="#" class = "inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
@@ -30,7 +30,19 @@
                 </li>
               
             </ol>
+            <div class="w-80">
+                <form action="#" method="post" class="w-full flex relative rounded-full border-1 overflow-hidden focus:outline-none focus:ring-1 focus:ring-black/10  border border-gray-800/10">
+                  <input type="search" name="search" placeholder="search..." class="w-4/5  placeholder-gray-800 p-2  bg-white rounded-full">
+                  <button type="submit" name="search" class="w-1/5 py-2 flex items-center justify-center bg-gray-600 hover:bg-gray-700 text-white overflow-hidden rounded-full">
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+
+                  </button>
+               </form>
+            </div>
         </nav>
+        <?php include("message.php"); ?>
         <!-------body contain-------->
         <div class = "flex flex-wrap my-5 -mx-2">
             <div class = "w-full lg:w-1/3 p-2">

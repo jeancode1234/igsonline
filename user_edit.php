@@ -43,7 +43,7 @@
                         $edit = $connect->query("SELECT * FROM user WHERE client_id='$id'");
                         if ($edit->rowCount()>0) {
                             foreach ($edit as $edi) {?>
-                            <div class="w-full shadow-2xl rounded-b-2xl bg-white sm:max-w-sm md:max-w-2xl">
+                            <div class="w-full shadow rounded-b-2xl sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl">
                                 <div class="w-full h-2 bg-gray-900 transfrom -translate-y-2 rounded-t-full"></div>
                                 <h3 class="pt-4 text-2xl text-center text-gray-800">Admin Edit User Form</h3>
                                 <form action="code.php" method="POST" class="w-full space-y-8 p-8">
