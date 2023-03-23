@@ -30,8 +30,8 @@
                     </a>
                 </li>
                 <li class = "inline-flex items-center">
-                    <a href="adduser.php" class = " px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 focus:bg-blue-600 dark:focus:bg-blue-600 inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-                        Ajouter 
+                    <a href="adduser.php" class = " px-4 py-2 rounded bg-gray-800 hover:bg-gray-900 inline-flex items-center text-sm font-medium text-white hover:text-white dark:text-white dark:hover:text-white">
+                        Ajouter un nouvel utilisateur
                     </a>
                 </li>
             </ol>
@@ -110,10 +110,14 @@
                     </div>
                     <div class = "flex flex-col justify-around flex-grow ml-5 text-white">
                         <div class = "text-xs whitespace-nowrap">
-                            Total Visitor
+                            Total Categorie
                         </div>
+                        <?php 
+                          $print= $connect->query("SELECT * FROM categorie");
+                          $ol= $print->rowCount();
+                        ?>
                         <div class = "">
-                            500
+                            <?php echo $ol ;?>
                         </div>
                     </div>
                     <div class = " flex items-center flex-none text-white">
@@ -129,12 +133,14 @@
                        
                         <div class="overflow-x-scroll">
                             <table class="w-full whitespace-nowrap">
-                                <thead class="bg-gradient-to-r dark:from-cyan-500 text-white dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500">
+                                <thead class="bg-gray-800 text-white">
                                    <th class="text-left py-3 px-2 rounded-l-lg">ID</th>
-                                    <th class="text-left py-3 px-2">Name</th>
+                                    <th class="text-left py-3 px-2">Nom</th>
                                     <th class="text-left py-3 px-2">Email</th>
-                                    <th class="text-left py-3 px-2">Group</th>
-                                    <th class="text-left py-3 px-2">Status</th>
+                                    <th class="text-left py-3 px-2">Adresse</th>
+                                    <th class="text-left py-3 px-2">Téléphone</th>
+                                    <th class="text-left py-3 px-2">Role</th>
+                                    <th class="text-left py-3 px-2">Statut</th>
                                     <th class="text-left py-3 px-2 rounded-r-lg">Actions</th>
                                 </thead>
                                 <?php 
@@ -153,6 +159,8 @@
                                         <p><?php echo $a['nom'] ;?></p>
                                     </td>
                                     <td class="py-3 px-2"><?php echo $a['email'] ;?></td>
+                                    <td class="py-3 px-2"><?php echo $a['adresse'] ;?></td>
+                                    <td class="py-3 px-2"><?php echo $a['telephone'] ;?></td>
                                     <td class="py-3 px-2"><?php  if ($a['role_as'] =="0") {
                                         echo "Utilisateur";
                                       }else {
@@ -177,17 +185,20 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                                             </svg>
                                             </a>
-                                            <a href="" title="Suspend user" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-                                            </svg>
-                                            </a>
+                                              <form action="code.php" method="post">
+                                                <button type="submit" name="delete_user"  value="<?php echo $a['client_id'];?>" class="mt-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                                                    </svg>
+                                                </button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
                                     <?php
                                     }
                                 }else {?>
-                                    <h1 class="text-2xl text-red-600 text-center">Aucun utilisateur trouvé</h1>
+                                    <h1 class="text-2xl text-red-600 font-serif font-medium text-center">Aucun utilisateur trouvé</h1>
                                 <?php  
                                 }
                                 ;?>

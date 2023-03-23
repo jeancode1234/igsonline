@@ -107,7 +107,7 @@
         </div>
         
     </aside>
-    <script>
+   <script>
         const sidebar = document.querySelector("aside");
         const maxSidebar = document.querySelector(".max")
         const miniSidebar = document.querySelector(".mini")
