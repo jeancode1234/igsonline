@@ -88,7 +88,7 @@
    <div class="w-full bg-gray-900 py-8 space-y-8">
         
         <h1 class="text-4xl lg:text-6xl font-bold text-white text-center">New collection 2023</h1>
-        <div class="w-full container md:max-w-full  mx-auto px-4 space-y-8">
+        <div class="w-full container sm:max-w-full  mx-auto px-4 space-y-8">
               <div class="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
                     <?php $req= $connect->query("SELECT * FROM categorie ORDER BY cat_id desc LIMIT 3");
                       if ($req->rowCount()>0) {
