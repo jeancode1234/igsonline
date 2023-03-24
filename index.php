@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include("connexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,11 +64,14 @@
            <div class="grid xs:grid-col-2 sm:grid-col-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4 ">
                 <div class="col-span-2 sm:col-span-4 md:col-span-6 lg:px-8 lg:col-span-4 xl:col-span-6 flex items-center justify-center">
                   <div class="w-full px-4  lg:px-8  lg:h-[200px] space-y-6 lg:space-y-10">
-                      <h1 class="text-4xl xl:text-6xl text-gray-900 font-bold">Il est temps d'agir!</h1>
+                      <h1 class="text-4xl xl:text-5xl  text-gray-900 font-bold">Il est temps d'agir!</h1>
                      <p class="text-sm text-gray-500 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores repudiandae impedit expedita maxime dolore amet, debitis iusto facere ipsam.</p>
                      <div class="w-full lg:w-3/4 flex rounded-full overflow-hidden border bg-white border-gray-800">
-                        <input type="text" name="search" class="w-3/5 h-12 px-4 border-none  bg-transparent focus:outline-none" placeholder="Search...">
-                        <button class="w-2/5 h-12 flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white rounded-full ">Search</button>
+                        <input type="text" name="search" class="w-4/5 h-12 px-4 border-none  bg-transparent focus:outline-none" placeholder="Search...">
+                        <button class="w-1/5 h-12 flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                            </button>
                      </div>
                   </div>
                      
@@ -86,45 +90,28 @@
         <h1 class="text-4xl lg:text-6xl font-bold text-white text-center">New collection 2023</h1>
         <div class="w-full container mx-auto px-4 space-y-8">
               <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
-                    <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
-                        <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                          <div class=" w-full h-full relative">
-                             <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                 <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                 <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                             </div>
-                          </div>
-                             
-                         </div>
-                          <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                         
-                    </div>
-                    <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
-                        <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                          <div class=" w-full h-full relative">
-                             <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                 <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                 <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                             </div>
-                          </div>
-                             
-                         </div>
-                          <img src="img/portfolio-8.jpg" class="w-full h-full object-cover object-center" alt="">
-                         
-                    </div>
-                    <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
-                        <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                          <div class=" w-full h-full relative">
-                             <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                 <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                 <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                             </div>
-                          </div>
-                             
-                         </div>
-                          <img src="img/portfolio-6.jpg" class="w-full h-full object-cover object-center" alt="">
-                         
-                    </div>
+                    <?php $req= $connect->query("SELECT * FROM categorie ORDER BY cat_id desc LIMIT 3");
+                      if ($req->rowCount()>0) {
+                        while ($result = $req->fetch()) {?>
+                          <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
+                              <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
+                                  <div class=" w-full h-full relative">
+                                    <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
+                                        <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base"><?php echo $result['nom'] ;?></p>
+                                        <a href="resultat.php?id=<?php echo $result['cat_id']; ?>" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
+                                    </div>
+                                  </div>
+                                
+                              </div>
+                              <img src="img/<?php echo $result['image'] ;?>" class="w-full h-full object-cover object-center" alt="">
+                          
+                            </div>
+                        <?php  
+                        }
+                      }
+                    ?>
+                    
+                    
               </div>
               <div class="w-full space-y-4 py-8">
                   <h3 class="text-white text-2xl font-semibold">New Products Arrival</h3>
@@ -243,10 +230,9 @@
               
         </div>
    </div>
-   <div class="w-full relative">
-     <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-0 -z-10" viewBox="0 0 1440 320"><path fill="#111827" fill-opacity="1" d="M0,288L48,266.7C96,245,192,203,288,186.7C384,171,480,181,576,165.3C672,149,768,107,864,90.7C960,75,1056,85,1152,112C1248,139,1344,181,1392,202.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+   <div class="w-full ">
       <div class=" w-full container mx-auto px-4 md:px-0 py-8 space-y-8">
-           <h1 class="text-6xl text-gray-800 lg:text-white font-bold text-center">Services</h1>
+           <h1 class="text-6xl text-gray-800 font-bold text-center">Services</h1>
            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
                     <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg relative cursor-pointer">
                         <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
