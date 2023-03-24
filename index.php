@@ -88,8 +88,8 @@
    <div class="w-full bg-gray-900 py-8 space-y-8">
         
         <h1 class="text-4xl lg:text-6xl font-bold text-white text-center">New collection 2023</h1>
-        <div class="w-full container mx-auto px-4 space-y-8">
-              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
+        <div class="w-full container md:max-w-full  mx-auto px-4 space-y-8">
+              <div class="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
                     <?php $req= $connect->query("SELECT * FROM categorie ORDER BY cat_id desc LIMIT 3");
                       if ($req->rowCount()>0) {
                         while ($result = $req->fetch()) {?>
@@ -115,8 +115,8 @@
               </div>
               <div class="w-full space-y-4 py-8">
                   <h3 class="text-white text-2xl font-semibold">New Products Arrival</h3>
-                  <div class="grid grid-cols-4  md:grid-cols-4 lg:grid-cols-12 grid-flow-row gap-2 md:gap-4">
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
+                  <div class="grid grid-cols-4 md:grid-cols-12 grid-flow-row gap-2 md:gap-4">
+                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
                             <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
                               <div class=" w-full h-full relative">
                                 <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
@@ -129,7 +129,7 @@
                               <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
                             
                         </div>
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
+                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
                             <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
                               <div class=" w-full h-full relative">
                                 <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
@@ -142,7 +142,7 @@
                               <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
                             
                         </div>
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
+                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
                             <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
                               <div class=" w-full h-full relative">
                                 <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
@@ -155,7 +155,7 @@
                               <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
                             
                         </div>
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
+                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
                             <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
                               <div class=" w-full h-full relative">
                                 <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
