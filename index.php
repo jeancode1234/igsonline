@@ -85,7 +85,7 @@
       </div>
 
   </div>
-   <div class="w-full bg-gray-900 py-8 space-y-8">
+   <div class="w-full  bg-gray-900 py-8 space-y-8">
         
         <h1 class="text-4xl lg:text-6xl font-bold text-white text-center">New collection 2023</h1>
         <div class="w-full container sm:max-w-full  mx-auto px-4 space-y-8">
@@ -113,63 +113,37 @@
                     
                     
               </div>
-              <div class="w-full space-y-4 py-8">
-                  <h3 class="text-white text-2xl font-semibold">New Products Arrival</h3>
-                  <div class="grid grid-cols-4 md:grid-cols-12 grid-flow-row gap-2 md:gap-4">
-                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
+              <div class="w-full container sm:max-w-full  mx-auto  space-y-8">
+                  <h3 class="text-white text-2xl font-semibold">Nouveautés</h3>
+                   <?php
+                      $product=$connect->query("SELECT * FROM produit ORDER BY created_at DESC LIMIT 4");
+                   ?>
+                  
+                    <div class="grid grid-cols-4  md:grid-cols-4 lg:grid-cols-12 grid-flow-row gap-4">
+                      <?php 
+                        foreach ($product as $produit) {?>
+                         <div class="col-span-2 lg:col-span-4 xl:col-span-3   overflow-hidden shadow-xl shadow-green-800/10 bg-white sm:h-[400px] md:h-[360px] ">
+                                <div class="w-full sm:h-3/5 overflow-hidden ">
+                                        <img src="img/<?php echo $produit['image'];?>" class="transform hover:scale-125 duration-300 w-full h-full" alt="">
                                 </div>
-                              </div>
+                                    <div class="w-full  p-4 space-y-2">
+                                        <h1 class="text-lg font-bold text-gray-800"><?php echo $produit['titre'] ?></h1>
+                                            <p class="text-sm text-gray-600"><?php echo $produit['description'] ?></p>
+                                        <div class="w-full py-2">
+                                            <a href="" class="px-4 py-2 shadow-md bg-gray-800 text-white hover:bg-gray-900"> voir plus</a>
+
+                                        </div>
+                                    </div>
                                 
                             </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                        <div class="col-span-2 md:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                  </div>
-              </div>
+                        <?php    
+                        }
+                      ?>
+                           
+                        
+                
+                    </div>
+             </div>
               <div class="w-full space-y-4 ">
                   <h3 class="text-white text-2xl font-semibold">Lastest Products Arrival</h3>
                   <div class="grid grid-cols-4  md:grid-cols-4 lg:grid-cols-12 grid-flow-row gap-2 md:gap-4">
