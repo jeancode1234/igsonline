@@ -64,8 +64,8 @@
            <div class="grid xs:grid-col-2 sm:grid-col-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4 ">
                 <div class="col-span-2 sm:col-span-4 md:col-span-6 lg:px-8 lg:col-span-4 xl:col-span-6 flex items-center justify-center">
                   <div class="w-full px-4  lg:px-8  lg:h-[200px] space-y-6 lg:space-y-10">
-                      <h1 class="text-4xl xl:text-5xl  text-gray-900 font-bold">Il est temps d'agir!</h1>
-                     <p class="text-sm text-gray-500 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores repudiandae impedit expedita maxime dolore amet, debitis iusto facere ipsam.</p>
+                      <h1 class="text-4xl xl:text-7xl text-gray-900 font-bold">Il est temps d'agir!</h1>
+                     <p class="text-lg text-gray-500 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores repudiandae impedit expedita maxime dolore amet, debitis iusto facere ipsam.</p>
                      <div class="w-full lg:w-3/4 flex rounded-full overflow-hidden border bg-white border-gray-800">
                         <input type="text" name="search" class="w-4/5 h-12 px-4 border-none  bg-transparent focus:outline-none" placeholder="Search...">
                         <button class="w-1/5 h-12 flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">

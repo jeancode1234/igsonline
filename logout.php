@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_POST["submit"])) {
 
     session_destroy();
@@ -8,8 +7,8 @@ if (isset($_POST["submit"])) {
     unset($_SESSION['auth_role']);
     unset($_SESSION['auth_user']);
 
-    $_SESSION["message"] ="logout successful";
-    header("Location:login.php");
+    $_SESSION['message'] ="Déconnexion reussie";
+    header("Location: login.php");
     exit(0);
 }
 
