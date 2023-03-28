@@ -54,36 +54,24 @@
         </div>
     </div>  -->
 
-  <div class="w-full">
+  <div class="w-full h-96 md:h-screen">
+     <?php include('message.php');?>
      <?php include('navbar.php');?> 
-      <div class="w-full h-24 lg:h-14"></div>
-      <?php include('message.php');?>
-      <div class="w-full relative">
-      <svg xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 -z-10" viewBox="0 0 1440 320"><path fill="#111827" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,224C384,213,480,139,576,101.3C672,64,768,64,864,101.3C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    
+     <div class="w-full p-4 h-full flex items-center bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/pixel.webp');">
+           <div class="w-full md:max-w-2xl h-[300px] space-y-8 lg:mx-14">
+               <h1 class="text-5xl md:text-6xl xl:text-7xl text-white font-bold">Il est temps d'agir</h1>
+               <p class="md:text-lg text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus animi inventore necessitatibus, hic adipisci voluptate aliquid maiores quae?</p>
+                <div class="max-w-md md:max-w-lg flex relative h-12 overflow-hidden">
+                     <input type="text" name="search" class="w-4/5 border-none focus:outline-none bg-white h-full" placeholder="rechercher un produit ici...">
+                      <button class="w-1/5 h-full flex items-center justify-center bg-orange-500">
+                           Rechercher
+                      </button>
 
-           <div class="grid xs:grid-col-2 sm:grid-col-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4 ">
-                <div class="col-span-2 sm:col-span-4 md:col-span-6 lg:px-8 lg:col-span-4 xl:col-span-6 flex items-center justify-center">
-                  <div class="w-full px-4  lg:px-8  lg:h-[200px] space-y-6 lg:space-y-10">
-                      <h1 class="text-4xl xl:text-7xl text-gray-900 font-bold">Il est temps d'agir!</h1>
-                     <p class="text-lg text-gray-500 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores repudiandae impedit expedita maxime dolore amet, debitis iusto facere ipsam.</p>
-                     <div class="w-full lg:w-3/4 flex rounded-full overflow-hidden border bg-white border-gray-800">
-                        <input type="text" name="search" class="w-4/5 h-12 px-4 border-none  bg-transparent focus:outline-none" placeholder="Search...">
-                        <button class="w-1/5 h-12 flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                            </svg>
-                            </button>
-                     </div>
-                  </div>
-                     
-                </div>
-                <div class="col-span-2 sm:col-span-4 md:col-span-6 lg:col-span-4 xl:col-span-6 overflow-hidden">
-                      
-                           <img src="img/elegance.png" class="w-full h-full object-cover object-left" alt="">
-                      
                 </div>
            </div>
-      </div>
-
+     </div>
+     
   </div>
    <div class="w-full  bg-gray-900 py-8 space-y-8">
         

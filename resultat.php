@@ -14,33 +14,34 @@
 <body>
     <div class="w-full h-auto">
         <?php include("navbar.php");?>
-        <div class="w-full h-14"></div>
-          <div class="w-full container md:max-w-full lg:max-w-7xl p-4 lg:p-8 mx-auto  md:h-[480px] lg:h-[600px]">
-            <?php
-              if (isset($_GET['id'])) {
-                   $cat_id = $_GET['id'];
-                   $req= $connect->query("SELECT * FROM categorie WHERE cat_id='$cat_id'");
-              }
-            ?>
-              <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-10 grid-flow-row gap-4 lg:gap-8 md:h-full">
-                  <?php
-                      if ($req->rowCount()>0) {
-                        if ($result=$req->fetch()) {?>
-                             <div class="col-span-4 lg:col-span-5 overflow-hidden md:h-full">
-                                  <img src="img/<?php echo $result['image'];?>" class=" h-full hover:scale-110 duration-300 object-cover object-center w-full" alt="">
-                             </div>
-                             <div class="col-span-4 lg:col-span-5 overflow-hidden space-y-4 md:h-full">
-                                <h1 class="text-2xl lg:text-4xl font-bold text-gray-800"><?php echo $result['nom'] ;?></h1>
-                                <p class="leading-loose text-base text-gray-800"> <?php echo $result['description'];?></p>
-                             </div>
-                        <?php
-                        }
-                      }
-                  ?>
-                  
-              </div>
-          </div>
+        <div class="w-full h-18"></div>
+        <nav class = "flex px-5 py-3 text-gray-700 justify-between rounded-lg bg-gray-50 dark:bg-[#1E293B] " aria-label="Breadcrumb">
+            <ol class = "inline-flex items-center space-x-1 md:space-x-3">
+                <li class = "inline-flex items-center">
+                    <a href="#" class = "inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+                        <svg class = "w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                        Accueil
+                    </a>
+                </li>
+                <li class = "inline-flex items-center">
+                    <a href="adduser.php" class = " px-4 py-2 rounded bg-gray-800 hover:bg-gray-900 inline-flex items-center text-sm font-medium text-white hover:text-white dark:text-white dark:hover:text-white">
+                        Ajouter un nouvel utilisateur
+                    </a>
+                </li>
+            </ol>
 
+            <div class="w-80">
+                <form action="adminindex.php" method="get" class="w-full flex relative rounded-full border-1 overflow-hidden   border border-gray-800/10">
+                  <input type="text" autocomplete="off" name="search" placeholder="search..." class="w-4/5  p-2  bg-white rounded-r-full focus:outline-none border-none transform translate-x-4">
+                  <button type="submit" name="submit" class="w-1/5 py-2 flex items-center justify-center bg-gray-600 hover:bg-gray-700 text-white overflow-hidden rounded-r-full">
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+
+                  </button>
+               </form>
+            </div>
+        </nav>
            <div class="w-full container mx-auto space-y-4 py-8">
                   <h3 class="text-gray-800 text-2xl font-semibold">Produits de la categorie</h3>
                    <?php

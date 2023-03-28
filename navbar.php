@@ -13,7 +13,7 @@
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<div class="w-full text-gray-700 bg-gray-900 dark-mode:text-gray-200 dark-mode:bg-gray-800 fixed z-30">
+<div class="w-full text-gray-700 bg-gray-900 opacity-80 py-2 dark-mode:text-gray-200 dark-mode:bg-gray-800 ">
         <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row md:px-6 lg:px-8">
           <div class="p-4 flex flex-row items-center justify-between space-x-2">
             <a href="#" class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">IGSonline</a>
@@ -176,8 +176,8 @@
                   </div>
                 </div>  
                 <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg text-white dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-800 focus:text-gray-800  focus:outline-none focus:shadow-outline" href="#">Contact</a>
-                <a class="px-8 py-3 mt-2 text-sm font-semibold bg-orange-500 rounded-full dark-mode:bg-transparent hover:bg-white dark-mode:focus:bg-orange-600 text-white dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:bg-white focus:outline-none focus:shadow-outline"  href="login.php">Se connecter</a>
-                <a class="px-8 py-3 mt-2 text-sm font-semibold bg-white rounded-full dark-mode:bg-transparent hover:bg-gray-800 dark-mode:focus:bg-orange-600 text-gray-800 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-white  focus:bg-white focus:outline-none focus:shadow-outline "  href="register.php">S'inscrire</a>
+                <a class="px-8 py-3 mt-2 text-sm font-semibold bg-orange-500 rounded dark-mode:bg-transparent hover:bg-white dark-mode:focus:bg-orange-600 text-white dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-orange-400 focus:text-orange-400  focus:bg-white focus:outline-none focus:shadow-outline"  href="login.php">Se connecter</a>
+                <a class="px-8 py-3 mt-2 text-sm font-semibold bg-white rounded dark-mode:bg-transparent hover:bg-gray-800 dark-mode:focus:bg-orange-600 text-gray-800 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-white focus:text-white  focus:bg-white focus:outline-none focus:shadow-outline "  href="register.php">S'inscrire</a>
               <?php }; ?>
           </nav>
         </div>

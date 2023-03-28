@@ -9,12 +9,12 @@
 </head>
 <body>
     <!-- component -->
-<footer class="bg-gradient-to-r relative bg-gray-600">
-<svg xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 " viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,32L48,32C96,32,192,32,288,48C384,64,480,96,576,117.3C672,139,768,149,864,144C960,139,1056,117,1152,96C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-  <div class="max-w-screen-xl px-4 py-16 lg:py-4 lg:pt-12 mx-auto sm:px-6 lg:px-8 transform">
+<footer class="relative bg-gray-800">
+<svg xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 -z-10" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,32L48,32C96,32,192,32,288,48C384,64,480,96,576,117.3C672,139,768,149,864,144C960,139,1056,117,1152,96C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  <div class="max-w-screen-xl px-4 py-16 lg:py-4 lg:pt-12 mx-auto sm:px-6 lg:px-8 bg-opacity-10">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+       <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
         <p class="max-w-xs mt-4 text-lg text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
         </p>
@@ -51,8 +51,8 @@
           </a>
         </div>
       </div>
-      <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4 text-lg">
-        <div>
+      <div class="grid grid-cols-1 gap-8 lg:col-span-2  sm:grid-cols-2 lg:grid-cols-4 text-lg">
+        <div class="mx-auto md:mx-0 text-center">
           <p class="font-bold text-white">
             Company
           </p>
@@ -63,7 +63,7 @@
             <a class="hover:opacity-75 hover:text-orange-500" href> Careers </a>
           </nav>
         </div>
-        <div>
+        <div class="mx-auto md:mx-0 text-center">
           <p class="font-bold text-white">
             Services
           </p>
@@ -75,7 +75,7 @@
             <a class="hover:opacity-75 hover:text-orange-500" href> SEO Optimisation </a>
           </nav>
         </div>
-        <div>
+        <div class="mx-auto md:mx-0 text-center">
           <p class="font-bold text-white">
             Helpful Links
           </p>
@@ -85,7 +85,7 @@
             <a class="hover:opacity-75 hover:text-orange-500" href> Live Chat </a>
           </nav>
         </div>
-        <div>
+        <div class="mx-auto md:mx-0 text-center">
           <p class="font-bold text-white">
             Legal
           </p>
