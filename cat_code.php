@@ -43,5 +43,26 @@ if (isset($_POST['create_cat'])) {
     }
 }
   
+if (isset($_POST['update_user'])) {
+    if (!empty( $_POST['nom']) && !empty($_POST['email']) && !empty($_POST['adresse']) && !empty($_POST['telephone']) && !empty($_POST['password'])) {
+    $cat_id = $_POST['user_id'];
+    $nom = $_POST['nom'];
+    $email = $_POST['email'];
+    $adresse = $_POST['adresse'];
+    $phone = $_POST['telephone'];
+    $password =  md5($_POST['password']);
+    $role = $_POST['role_as'];
+    $status = $_POST['status'] == true ? '1':'0';
+
+    $query=$connect->query("UPDATE categorie SET nom='$nom', email='$email', adresse='$adresse', telephone='$phone',password='$password',
+    role_as='$role', status='$status' WHERE client_id='$user_id'");
+
+    if ($query) {
+        $_SESSION['message'] ="mise à jour reussie";
+        header("Location: adminindex.php");
+        exit(0);
+    }
+ }
+ }
 
 ?>

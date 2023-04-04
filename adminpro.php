@@ -70,7 +70,7 @@ include("topnavbar.php");
                 }
                 if ($list->rowCount() > 0) {
 
-                    while ($a = $list->fetch()) { ?>
+                     while ($a = $list->fetch()) { ?>
 
                         <tr class="border-b border-gray-700">
                             <td class="py-3 px-2"><?php echo $a['prod_id']; ?></td>

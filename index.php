@@ -81,7 +81,7 @@
                     <?php $req= $connect->query("SELECT * FROM categorie ORDER BY cat_id desc LIMIT 3");
                       if ($req->rowCount()>0) {
                         while ($result = $req->fetch()) {?>
-                          <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
+                          <div class="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-4 group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
                               <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
                                   <div class=" w-full h-full relative">
                                     <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">

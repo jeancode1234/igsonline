@@ -36,7 +36,7 @@
     <?php include("message.php"); ?>
     <!-------body contain-------->
     
-    <div class="w-full border sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl">
+    <div class="w-full border mx-auto sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl">
                 <h3 class="pt-4 text-2xl text-center font-bold text-gray-800">Formulaire d'ajout d'un Administrateur ou d'un Utlisateur</h3>
                 <form action="code.php" method="POST" class="w-full space-y-8 p-8">
                         <div class="w-full md:flex items-center justify-center space-y-4 md:space-y-0 md:space-x-4">

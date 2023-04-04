@@ -47,6 +47,8 @@
                     if ($result->rowCount()>0) {
                         foreach ($result as $data) {?>
                             <form action="cat_code.php" method="POST" enctype="multipart/form-data" class="w-full space-y-8 p-8">
+                            <input type="hidden" name="cat_id" value="<?php echo $data['cat_id'] ;?>">
+
                                 <div class="w-full md:flex items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
                                 <div class="relative w-full md:w-1/2">
                                     <input type="text" value="<?php echo $data['nom'];?>"  require name="nom" id="floating_outlined" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-800 focus:outline-none focus:ring-0 focus:border-gray-800 peer" placeholder=" " />
@@ -73,7 +75,7 @@
                                 
                                 
                                 <div class="mb-6 text-center">
-                                        <button class="w-full px-4 py-3 font-bold text-white bg-gray-800 rounded-lg hover:gray-900 focus:outline-none focus:shadow-outline" type="submit" name="create_cat">
+                                        <button class="w-full px-4 py-3 font-bold text-white bg-gray-800 rounded-lg hover:gray-900 focus:outline-none focus:shadow-outline" type="submit" name="update_cat">
                                             Mise à jour de la categorie
                                         </button>
                                 </div>

@@ -63,6 +63,7 @@
     }
 
    if (isset($_POST['update_user'])) {
+      if (!empty( $_POST['nom']) && !empty($_POST['email']) && !empty($_POST['adresse']) && !empty($_POST['telephone']) && !empty($_POST['password'])) {
       $user_id = $_POST['user_id'];
       $nom = $_POST['nom'];
       $email = $_POST['email'];
@@ -81,6 +82,6 @@
           exit(0);
       }
    }
-
+   }
   
 ?>
