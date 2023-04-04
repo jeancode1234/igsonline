@@ -7,7 +7,7 @@
 
       $query = $connect->query("DELETE FROM user WHERE client_id ='$user'");
       if ($query) {
-         if ($role =="1") {
+         if ($_SESSION['auth_user']['user_id'] =="1") {
             $_SESSION['message'] = "Administrateur supprimé";
             header("Location: adminindex.php");
             exit(0);
@@ -64,14 +64,14 @@
 
    if (isset($_POST['update_user'])) {
       if (!empty( $_POST['nom']) && !empty($_POST['email']) && !empty($_POST['adresse']) && !empty($_POST['telephone']) && !empty($_POST['password'])) {
-      $user_id = $_POST['user_id'];
-      $nom = $_POST['nom'];
-      $email = $_POST['email'];
-      $adresse = $_POST['adresse'];
-      $phone = $_POST['telephone'];
-      $password =  md5($_POST['password']);
-      $role = $_POST['role_as'];
-      $status = $_POST['status'] == true ? '1':'0';
+            $user_id = $_POST['user_id'];
+            $nom = $_POST['nom'];
+            $email = $_POST['email'];
+            $adresse = $_POST['adresse'];
+            $phone = $_POST['telephone'];
+            $password =  md5($_POST['password']);
+            $role = $_POST['role_as'];
+            $status = $_POST['status'] == true ? '1':'0';
 
       $query=$connect->query("UPDATE user SET nom='$nom', email='$email', adresse='$adresse', telephone='$phone',password='$password',
       role_as='$role', status='$status' WHERE client_id='$user_id'");
@@ -81,6 +81,10 @@
           header("Location: adminindex.php");
           exit(0);
       }
+   }else {
+         $_SESSION['message'] ="Veuillez renseignez tous les champs!!";
+          header("Location: user_edit.php");
+          exit(0);
    }
    }
   

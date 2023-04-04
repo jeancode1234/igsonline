@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Adminuser_edit</title>
 </head>
 <body>
     <div class = "content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
@@ -35,8 +35,9 @@
                 </li>
             </ol>
         </nav>
-        <div id="content" class=" col-span-9 rounded-lg p-6 flex items-center justify-center">
-    
+         
+        <div id="content" class=" col-span-9 rounded-lg p-6 flex flex-col items-center justify-center">
+        
 					<?php
                     if (isset($_GET['id'])) {
                         $id = $_GET['id'];
@@ -44,6 +45,7 @@
                         if ($edit->rowCount()>0) {
                             foreach ($edit as $edi) {?>
                             <div class="w-full shadow rounded-b-2xl sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-7xl">
+                                <?php include("message.php");?>
                                 <div class="w-full h-2 bg-gray-900 transfrom -translate-y-2 rounded-t-full"></div>
                                 <h3 class="pt-4 text-2xl text-center text-gray-800">Admin Edit User Form</h3>
                                 <form action="code.php" method="POST" class="w-full space-y-8 p-8">

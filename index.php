@@ -55,9 +55,9 @@
     </div>  -->
 
   <div class="w-full h-96 md:h-screen">
-     <?php include('message.php');?>
+     
      <?php include('navbar.php');?> 
-    
+     <?php include('message.php');?>
      <div class="w-full p-4 h-full flex items-center bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/pixel.webp');">
            <div class="w-full md:max-w-2xl h-[300px] space-y-8 lg:mx-14">
                <h1 class="text-5xl md:text-6xl xl:text-7xl text-white font-bold">Il est temps d'agir</h1>
@@ -77,7 +77,7 @@
         
         <h1 class="text-4xl lg:text-6xl font-bold text-white text-center">New collection 2023</h1>
         <div class="w-full container sm:max-w-full  mx-auto px-4 space-y-8">
-              <div class="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
+              <div class="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 grid-flow-row gap-4">
                     <?php $req= $connect->query("SELECT * FROM categorie ORDER BY cat_id desc LIMIT 3");
                       if ($req->rowCount()>0) {
                         while ($result = $req->fetch()) {?>
