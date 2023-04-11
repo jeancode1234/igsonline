@@ -77,7 +77,7 @@ include("topnavbar.php");
 
                             <td class="py-3 px-2"><?php echo $a['nom']; ?></td>
                             <td class="py-3 px-2"><?php echo $a['description']; ?></td>
-                            <td class="py-3 px-2"><img src="<?php echo $a['image']; ?>" alt=""></td>
+                            <td class="py-3 px-2"><img src="<?php echo $a['image']; ?>" class="w-14 h-14 float-left" alt=""></td>
 
                             <td class="py-3 px-2"><?php
                                                     if ($a['status'] == "0") {

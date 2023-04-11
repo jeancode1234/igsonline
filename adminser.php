@@ -74,7 +74,7 @@ include("topnavbar.php");
                             <td class="py-3 px-2"><?php echo $a['service_id']; ?></td>
                             <td class="py-3 px-2"><?php echo $a['nom']; ?></td>
                             <td class="py-3 px-2"><?php echo $a['description']; ?></td>
-                            <td class="py-3 px-2"><img src="<?php echo $a['image'];?>" alt=""></td>
+                            <td class="py-3 px-2"><img src="<?php echo $a['image'];?>" width="80" height="80" alt=""></td>
                             <td class="py-3 px-2">
                                 <div class="inline-flex items-center space-x-3">
                                     <a href="serv_edit.php?id=<?php echo $a['service_id']; ?>" title="Edit" class="hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">

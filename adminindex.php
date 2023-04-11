@@ -199,10 +199,10 @@
                                 }
                                 ?></td>
                             <td class="py-3 px-2"><?php 
-                                if ($a['status'] =="0") {
-                                echo "Bloquer" ;
+                                if ( ($_SESSION['auth_user']['user_id'] !=$a['client_id'] && $a['status']=="0") ||($_SESSION['auth_user']['user_id'] !=$a['client_id'] && $a['status']=="1") ) {
+                                echo "<p style='color:red;'>Déconnecter</p>" ;
                                 }else {
-                                echo "Approved" ;
+                                echo "<p style='color:green;'>Connecter</p>" ;
                                 }
                                 ?>
                             </td>

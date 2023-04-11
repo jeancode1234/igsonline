@@ -57,12 +57,12 @@ include("topnavbar.php");
                             <form action="serv_code.php" method="post" enctype="multipart/form-data" class="w-full space-y-4">
                                 <input type="hidden" name="id" value="<?php echo $data['service_id'] ;?>">
                                 <div class="w-full md:flex space-y-4 md:space-y-0 md:space-x-4">
-                                    <input type="text" name="nom" class="w-full border p-2 focus:outline-none focus:ring-2  focus:ring-gray-700" placeholder="Entrez le nom de la categorie">
+                                    <input type="text" value="<?php echo $data['nom'] ;?>" name="nom" class="w-full border p-2 focus:outline-none focus:ring-2  focus:ring-gray-700" placeholder="Entrez le nom de la categorie">
                                     <input type="file" name="image" class="w-full border p-2 focus:outline-none focus:ring-2 focus:ring-gray-700">
                                 </div>
 
-                                <textarea name="description" id="" class="w-full border p-2 h-44 focus:outline-none focus:ring-2 focus:ring-gray-700"></textarea>
-                                <button type="submit" name="submit" class=" w-full h-12 bg-gray-800 hover:bg-gray-900 flex items-center justify-center text-white">Creation du service</button>
+                                <textarea name="description" value="<?php echo $data['description'] ;?>" id="" class="w-full border p-2 h-44 focus:outline-none focus:ring-2 focus:ring-gray-700"></textarea>
+                                <button type="submit" name="edit_serv" class=" w-full h-12 bg-gray-800 hover:bg-gray-900 flex items-center justify-center text-white">Creation du service</button>
                             </form>
                 <?php
                         }

@@ -91,7 +91,7 @@
                                   </div>
                                 
                               </div>
-                              <img src="img/<?php echo $result['image'] ;?>" class="w-full h-full object-cover object-center" alt="">
+                              <img src="<?php echo $result['image'] ;?>" class="w-full h-full object-cover object-center" alt="">
                           
                             </div>
                         <?php  
