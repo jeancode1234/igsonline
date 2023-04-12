@@ -14,7 +14,9 @@
 <body>
     <div class="w-full h-auto">
         <?php include("navbar.php");?>
-        <div class="w-full h-18"></div>
+        <div class="w-full h-80 md:h-96 bg-no-repeat bg-center bg-cover" style="background-image: url('img/shopping.webp');">
+           
+        </div>
        
            <div class="w-full container mx-auto space-y-4 py-8">
                   <h3 class="text-gray-800 text-2xl font-semibold">Produits de la categorie</h3>

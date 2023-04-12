@@ -54,21 +54,17 @@
         </div>
     </div>  -->
 
-  <div class="w-full h-96 md:h-screen">
+  <div class="w-full h-96 md:h-auto">
      
      <?php include('navbar.php');?> 
      <?php include('message.php');?>
-     <div class="w-full p-4 h-full flex items-center bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/pixel.webp');">
+     <div class="w-full p-4 h-96 flex items-center bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/pixel.webp');">
            <div class="w-full md:max-w-2xl h-[300px] space-y-8 lg:mx-14">
                <h1 class="text-5xl md:text-6xl xl:text-7xl text-white font-bold">Il est temps d'agir</h1>
                <p class="md:text-lg text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus animi inventore necessitatibus, hic adipisci voluptate aliquid maiores quae?</p>
-                <div class="max-w-md md:max-w-lg flex relative h-12 overflow-hidden">
-                     <input type="text" name="search" class="w-4/5 border-none focus:outline-none bg-white h-full" placeholder="rechercher un produit ici...">
-                      <button class="w-1/5 h-full flex items-center justify-center bg-orange-500">
-                           Rechercher
-                      </button>
-
-                </div>
+                <div class="w-full flex items-center">
+                      <a href="contact.php" class="px-8 py-4 hover:bg-orange-500 duration-300 hover:text-white rounded-full bg-white focus:ring-3 focus:ring-orange-400 text-gray-800">Contactez-nous</a>
+                </div> 
            </div>
      </div>
      
@@ -101,6 +97,15 @@
                     
                     
               </div>
+               <div class="w-full flex items-center justify-center py-2">
+                <?php 
+                  if (isset($_SESSION['auth'])) {?>
+                    <a href="allcat.php" class="p-4 rounded-full bg-white hover:bg-orange-600 text-gray-600 hover:text-white">Voir toutes les catégories</a>
+
+                   <?php
+                  }
+                ?>
+               </div>
               <div class="w-full container sm:max-w-full  mx-auto  space-y-8">
                   <h3 class="text-white text-2xl font-semibold">Nouveautés</h3>
                    <?php
@@ -132,114 +137,40 @@
                 
                     </div>
              </div>
-              <div class="w-full space-y-4 ">
-                  <h3 class="text-white text-2xl font-semibold">Lastest Products Arrival</h3>
-                  <div class="grid grid-cols-4  md:grid-cols-4 lg:grid-cols-12 grid-flow-row gap-2 md:gap-4">
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                        <div class="col-span-2 lg:col-span-4 xl:col-span-3  group overflow-hidden h-[260px] md:h-[360px]  rounded-lg  relative cursor-pointer">
-                            <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                              <div class=" w-full h-full relative">
-                                <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                    <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                    <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                                </div>
-                              </div>
-                                
-                            </div>
-                              <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                            
-                        </div>
-                  </div>
-              </div>
-              
+             
         </div>
    </div>
-   <div class="w-full ">
-      <div class=" w-full container mx-auto px-4 md:px-0 py-8 space-y-8">
-           <h1 class="text-6xl text-gray-800 font-bold text-center">Services</h1>
-           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 xl:grid-cols-12 grid-flow-row gap-4">
-                    <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg relative cursor-pointer">
-                        <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                          <div class=" w-full h-full relative">
-                             <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                 <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                 <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                             </div>
-                          </div>
-                             
-                         </div>
-                          <img src="img/portfolio-7.jpg" class="w-full h-full object-cover object-center" alt="">
-                         
-                    </div>
-                    <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg relative cursor-pointer">
-                        <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                          <div class=" w-full h-full relative">
-                             <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                 <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                 <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                             </div>
-                          </div>
-                             
-                         </div>
-                          <img src="img/portfolio-8.jpg" class="w-full h-full object-cover object-center" alt="">
-                         
-                    </div>
-                    <div class="col-span-2 sm:col-span-3 md:col-span-4  group overflow-hidden h-[360px]  rounded-lg relative cursor-pointer">
-                        <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
-                          <div class=" w-full h-full relative">
-                             <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
-                                 <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base">Categories</p>
-                                 <a href="" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
-                             </div>
-                          </div>
-                             
-                         </div>
-                          <img src="img/portfolio-6.jpg" class="w-full h-full object-cover object-center" alt="">
-                         
-                    </div>
-           </div>
-      </div>
+   <div class="w-full py-8 space-y-4 ">
+     <h1 class="text-gray-800 text-2xl md:text-4xl lg:text-6xl font-semibold text-center">Nos Services</h1>
+   <div class="w-full container sm:max-w-full  mx-auto px-4 space-y-8">
+              <div class="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 grid-flow-row gap-4">
+                    <?php $req= $connect->query("SELECT * FROM services ORDER BY service_id desc LIMIT 3");
+                      if ($req->rowCount()>0) {
+                        while ($result = $req->fetch()) {?>
+                          <div class="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-4 group overflow-hidden h-[360px]  rounded-lg  relative cursor-pointer">
+                              <div class="w-full h-full absolute group-hover:bg-opacity-60 duration-300 group-hover:bg-black">
+                                  <div class=" w-full h-full relative">
+                                    <div class="absolute bottom-4 w-full px-4 py-2 space-y-4">
+                                        <p class="invible text-transparent  group-hover:visible group-hover:text-white text-base"><?php echo $result['nom'] ;?></p>
+                                        <a href="detailserv.php?id=<?php echo $result['service_id']; ?>" class="invible text-transparent  group-hover:visible group-hover:text-white text-base">see more</a>
+                                    </div>
+                                  </div>
+                                
+                              </div>
+                              <img src="<?php echo $result['image'] ;?>" class="w-full h-full object-cover object-center" alt="">
+                          
+                            </div>
+                        <?php  
+                        }
+                      }
+                    ?>
+                    
+                    
+              </div>
+               
+        </div>
   </div>
- 
-  <div class="w-full h-14"></div>
+
   <?php include('footer.php') ?>
   
 </body>

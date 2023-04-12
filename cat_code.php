@@ -31,7 +31,7 @@ if (isset($_POST['create_cat'])) {
         $fichierTempo=$_FILES['image']['tmp_name'];
         $image_des ='img/'.$image_name;
         $image_extension = strrchr($image_name,".");
-        $ext_auto = array('.png','.jpg','.jpeg');
+        $ext_auto = array('.png','.jpg','.jpeg','.webp');
       if (in_array($image_extension,$ext_auto)) {
           if (move_uploaded_file($fichierTempo,$image_des)) {
             $cat = $connect->prepare("INSERT INTO categorie(nom,description,image,status) VALUES(?,?,?,?)");
@@ -65,7 +65,7 @@ if (isset($_POST['update_cat'])) {
         $fichierTempo=$_FILES['image']['tmp_name'];
         $image_des ='img/'.$image_name;
         $image_extension = strrchr($image_name,".");
-        $ext_auto = array('.png','.jpg','.jpeg');
+        $ext_auto = array('.png','.jpg','.jpeg','.webp');
       if (in_array($image_extension,$ext_auto)) {
           if (move_uploaded_file($fichierTempo,$image_des)) {
             $cat = $connect->query("UPDATE categorie SET nom='$cat_name',description='$cat_des',image='$image_des',status='$status' WHERE cat_id='$id'");
@@ -78,7 +78,7 @@ if (isset($_POST['update_cat'])) {
                 
           }
         }else {
-            $_SESSION['message']="Seuls les fichiers png,jpg ou jpeg  sont autorises";
+            $_SESSION['message']="Seuls les fichiers png,jpg ou jpeg  sont autorisés";
             header("location: addcat.php");
             exit(0);
         }
