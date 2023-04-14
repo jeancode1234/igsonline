@@ -99,7 +99,7 @@ include("connexion.php");
               </div>
             </div>
             <div class="relative flex items-center">
-                <div class="w-3 h-3 rounded-full absolute right-0 top-2 bg-orange-600"></div>
+                <div class="w-3 h-3 rounded-full absolute right-0 top-2 bg-orange-600 animate-spin"></div>
                 <img src="img/icons8-caddie-48.png" class="w-6 h-6" alt="">
             </div>
           <?php
@@ -171,7 +171,7 @@ include("connexion.php");
               </div>
             </div>
             <div class="relative flex items-center">
-                <div class="w-3 h-3 rounded-full absolute right-0 top-2 bg-orange-600"></div>
+                <div class="w-3 h-3 rounded-full absolute right-0 top-2 bg-orange-600 animate-spin"></div>
                 <img src="img/icons8-caddie-48.png" class="w-6 h-6" alt="">
             </div>
           <?php

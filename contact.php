@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +12,7 @@
 </head>
 <body>
     <?php include('navbar.php');?>
-    <div class="w-full relative py-8 space-y-4">
-      <div class="w-full absolute bottom-0 -z-10">
-      <svg xmlns="http://www.w3.org/2000/svg" class="" viewBox="0 0 1440 320"><path fill="#111827" fill-opacity="1" d="M0,96L1440,32L1440,320L0,320Z"></path></svg>
-
-      </div>
+  
       <div class="w-full  container mx-auto px-4 md:px-0 py-8 space-y-8">
             <h1 class="text-4xl lg:text-6xl text-gray-900 font-bold text-center">Need Some Help</h1>
             <p class="text-sm lg:text-lg text-gray-800 text-center font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident expedita sequi nisi aliquam dolorum nemo praesentium minima, dicta cum labore perferendis! Quia veniam necessitatibus laboriosam perferendis excepturi tenetur quam voluptatem.</p>
@@ -42,6 +41,6 @@
                   </div>
              </div>
       </div>
-    </div>
+   <?php include("footer.php"); ?>
 </body>
 </html>

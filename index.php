@@ -58,7 +58,7 @@
      
      <?php include('navbar.php');?> 
      <?php include('message.php');?>
-     <div class="w-full p-4 h-96 flex items-center bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/pixel.webp');">
+     <div class="w-full p-4 h-96 flex items-center bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('img/fond.webp');">
            <div class="w-full md:max-w-2xl h-[300px] space-y-8 lg:mx-14">
                <h1 class="text-5xl md:text-6xl xl:text-7xl text-white font-bold">Il est temps d'agir</h1>
                <p class="md:text-lg text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus animi inventore necessitatibus, hic adipisci voluptate aliquid maiores quae?</p>
